@@ -216,8 +216,8 @@ class ObjectDetectionDashboard:
         # Convert uploaded file to bytes
         image_bytes = uploaded_file.getvalue()
         
-        # Run detection
-        result = service.detect_objects(image_bytes)
+        # Run detection with confidence threshold
+        result = service.detect_objects(image_bytes, st.session_state.confidence_threshold)
         
         # Update image dimensions
         result.image_dimensions = st.session_state.uploaded_image.size

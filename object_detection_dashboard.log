@@ -55,3 +55,83 @@
 2025-07-15 19:32:04,978 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
 2025-07-15 19:32:06,581 - src.services.azure_service - INFO - Azure detection completed in 1.60s with 7 detections
 2025-07-15 19:32:06,589 - src.utils.image_processor - INFO - Drew 2 bounding boxes on image
+2025-07-15 19:32:14,936 - src.services.google_service - INFO - Starting Google AutoML object detection
+2025-07-15 19:32:18,576 - src.services.google_service - ERROR - Google AutoML detection failed: 403 Cloud AutoML API has not been used in project booming-bonito-465320-a0 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/automl.googleapis.com/overview?project=booming-bonito-465320-a0 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "automl.googleapis.com"
+}
+metadata {
+  key: "serviceTitle"
+  value: "Cloud AutoML API"
+}
+metadata {
+  key: "containerInfo"
+  value: "booming-bonito-465320-a0"
+}
+metadata {
+  key: "consumer"
+  value: "projects/booming-bonito-465320-a0"
+}
+metadata {
+  key: "activationUrl"
+  value: "https://console.developers.google.com/apis/api/automl.googleapis.com/overview?project=booming-bonito-465320-a0"
+}
+, locale: "en-US"
+message: "Cloud AutoML API has not been used in project booming-bonito-465320-a0 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/automl.googleapis.com/overview?project=booming-bonito-465320-a0 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+, links {
+  description: "Google developers console API activation"
+  url: "https://console.developers.google.com/apis/api/automl.googleapis.com/overview?project=booming-bonito-465320-a0"
+}
+]
+2025-07-15 19:59:27,811 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:59:29,920 - src.services.azure_service - INFO - Azure detection completed in 2.11s with 28 detections
+2025-07-15 19:59:29,936 - src.utils.image_processor - INFO - Drew 7 bounding boxes on image
+2025-07-15 19:59:44,457 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 19:59:48,062 - src.services.google_service - INFO - Parsing Vertex AI response with 1 predictions
+2025-07-15 19:59:48,062 - src.services.google_service - INFO - Successfully parsed 0 detections
+2025-07-15 19:59:48,063 - src.services.google_service - INFO - Vertex AI detection completed in 3.60s with 0 detections
+2025-07-15 19:59:48,064 - src.utils.image_processor - INFO - Drew 0 bounding boxes on image
+2025-07-15 20:00:00,951 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 20:00:03,985 - src.services.google_service - INFO - Parsing Vertex AI response with 1 predictions
+2025-07-15 20:00:03,985 - src.services.google_service - WARNING - Failed to parse detection 0: 'list' object has no attribute 'WhichOneof'
+2025-07-15 20:00:03,985 - src.services.google_service - INFO - Successfully parsed 0 detections
+2025-07-15 20:00:03,985 - src.services.google_service - INFO - Vertex AI detection completed in 3.03s with 0 detections
+2025-07-15 20:00:03,986 - src.utils.image_processor - INFO - Drew 0 bounding boxes on image
+2025-07-15 20:03:00,863 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 20:03:02,688 - src.services.azure_service - INFO - Azure detection completed in 1.82s with 28 detections
+2025-07-15 20:03:02,704 - src.utils.image_processor - INFO - Drew 7 bounding boxes on image
+2025-07-15 20:03:17,027 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 20:03:18,457 - src.services.google_service - ERROR - Google Vertex AI detection failed: Argument for field google.cloud.aiplatform.v1.PredictRequest.instances is not iterable
+2025-07-15 20:04:35,119 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 20:04:36,654 - src.services.google_service - ERROR - Google Vertex AI detection failed: Value not set
+2025-07-15 20:04:49,155 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 20:04:50,504 - src.services.google_service - ERROR - Google Vertex AI detection failed: Value not set
+2025-07-15 20:06:45,353 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 20:06:46,815 - src.services.google_service - ERROR - Google Vertex AI detection failed: Value not set
+2025-07-15 20:06:49,618 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 20:06:51,638 - src.services.azure_service - INFO - Azure detection completed in 2.02s with 28 detections
+2025-07-15 20:06:51,653 - src.utils.image_processor - INFO - Drew 7 bounding boxes on image
+2025-07-15 20:07:00,502 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 20:07:02,002 - src.services.google_service - ERROR - Google Vertex AI detection failed: Value not set
+2025-07-15 20:07:50,126 - src.services.google_service - INFO - Starting Google Vertex AI object detection
+2025-07-15 20:07:51,567 - src.services.google_service - WARNING - AutoML format failed: Value not set, trying alternative format
+2025-07-15 20:07:51,567 - src.services.google_service - ERROR - Google Vertex AI detection failed: Value not set
+2025-07-15 20:12:39,298 - src.services.google_service - INFO - Starting Vertex AI object detection
+2025-07-15 20:12:40,892 - src.services.google_service - ERROR - Vertex AI detection failed: 'Config' object has no attribute 'confidence_threshold'
+2025-07-15 20:15:24,823 - src.services.google_service - INFO - Starting Vertex AI object detection
+2025-07-15 20:15:28,366 - src.services.google_service - INFO - Vertex AI detection completed in 3.54s with 0 detections
+2025-07-15 20:15:28,367 - src.utils.image_processor - INFO - Drew 0 bounding boxes on image
+2025-07-15 20:15:44,155 - src.services.google_service - INFO - Starting Vertex AI object detection
+2025-07-15 20:15:47,483 - src.services.google_service - INFO - Vertex AI detection completed in 3.33s with 0 detections
+2025-07-15 20:15:47,485 - src.utils.image_processor - INFO - Drew 0 bounding boxes on image
+2025-07-15 20:15:55,849 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 20:15:57,554 - src.services.azure_service - INFO - Azure detection completed in 1.71s with 7 detections
+2025-07-15 20:15:57,556 - src.utils.image_processor - INFO - Drew 0 bounding boxes on image
+2025-07-15 20:16:01,266 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 20:16:02,765 - src.services.azure_service - INFO - Azure detection completed in 1.50s with 7 detections
+2025-07-15 20:16:02,776 - src.utils.image_processor - INFO - Drew 2 bounding boxes on image
+2025-07-15 20:16:15,547 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 20:16:17,875 - src.services.azure_service - INFO - Azure detection completed in 2.33s with 7 detections
+2025-07-15 20:16:17,877 - src.utils.image_processor - INFO - Drew 0 bounding boxes on image

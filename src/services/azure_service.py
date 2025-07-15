@@ -19,7 +19,7 @@ class AzureCustomVisionService(DetectionService):
         self.config = config
         self.logger = logging.getLogger(__name__)
         
-    def detect_objects(self, image_bytes: bytes) -> DetectionResult:
+    def detect_objects(self, image_bytes: bytes, confidence_threshold: float = 0.3) -> DetectionResult:
         """Detect objects using Azure Custom Vision API."""
         start_time = time.time()
         
@@ -54,7 +54,7 @@ class AzureCustomVisionService(DetectionService):
                 detections=detections,
                 processing_time=processing_time,
                 image_dimensions=image_dimensions,
-                confidence_threshold=0.3
+                confidence_threshold=confidence_threshold
             )
             
             self.logger.info(f"Azure detection completed in {processing_time:.2f}s with {len(detections)} detections")
