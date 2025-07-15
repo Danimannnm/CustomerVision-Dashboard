@@ -1,0 +1,30 @@
+2025-07-15 18:38:26,362 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 18:38:27,208 - src.services.azure_service - ERROR - Azure API request failed: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 18:38:27,209 - __main__ - ERROR - Detection error for Azure Custom Vision: Azure Custom Vision API error: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 18:38:43,425 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 18:38:44,323 - src.services.azure_service - ERROR - Azure API request failed: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 18:38:44,323 - __main__ - ERROR - Detection error for Azure Custom Vision: Azure Custom Vision API error: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 18:39:30,806 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 18:39:31,691 - src.services.azure_service - ERROR - Azure API request failed: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 18:39:31,692 - __main__ - ERROR - Detection error for Azure Custom Vision: Azure Custom Vision API error: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 18:41:54,541 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 18:41:57,124 - src.services.azure_service - INFO - Azure detection completed in 2.58s with 48 detections
+2025-07-15 18:41:57,126 - __main__ - INFO - Detection completed for Azure Custom Vision
+2025-07-15 18:41:57,128 - src.services.google_service - INFO - Starting Google AutoML object detection
+2025-07-15 18:41:58,598 - src.services.google_service - ERROR - Google AutoML detection failed: 'PredictionServiceClient' object has no attribute 'endpoint_path'
+2025-07-15 18:41:58,599 - __main__ - ERROR - Detection error for Google AutoML: Google AutoML detection failed: 'PredictionServiceClient' object has no attribute 'endpoint_path'
+2025-07-15 18:41:58,632 - src.utils.image_processor - INFO - Drew 6 bounding boxes on image
+2025-07-15 19:02:57,358 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:02:58,976 - src.services.azure_service - INFO - Azure detection completed in 1.62s with 48 detections
+2025-07-15 19:02:58,977 - __main__ - INFO - Detection completed for Azure Custom Vision
+2025-07-15 19:02:59,006 - src.utils.image_processor - INFO - Drew 6 bounding boxes on image
+2025-07-15 19:07:26,029 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:07:27,685 - src.services.azure_service - INFO - Azure detection completed in 1.66s with 48 detections
+2025-07-15 19:07:27,687 - __main__ - INFO - Detection completed for Azure Custom Vision
+2025-07-15 19:07:27,689 - src.utils.image_processor - INFO - Drew 6 bounding boxes on image
+2025-07-15 19:13:36,330 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:13:38,658 - src.services.azure_service - INFO - Azure detection completed in 2.33s with 48 detections
+2025-07-15 19:13:38,660 - __main__ - INFO - Detection completed for Azure Custom Vision
+2025-07-15 19:13:38,690 - src.utils.image_processor - INFO - Drew 6 bounding boxes on image
+2025-07-15 19:14:00,491 - src.utils.image_processor - INFO - Resized image from 318x159 to 300x150
+2025-07-15 19:14:02,268 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
