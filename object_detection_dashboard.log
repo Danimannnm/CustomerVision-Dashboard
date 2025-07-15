@@ -28,3 +28,30 @@
 2025-07-15 19:13:38,690 - src.utils.image_processor - INFO - Drew 6 bounding boxes on image
 2025-07-15 19:14:00,491 - src.utils.image_processor - INFO - Resized image from 318x159 to 300x150
 2025-07-15 19:14:02,268 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:14:04,472 - src.services.azure_service - INFO - Azure detection completed in 2.20s with 46 detections
+2025-07-15 19:14:04,474 - __main__ - INFO - Detection completed for Azure Custom Vision
+2025-07-15 19:14:04,497 - src.utils.image_processor - INFO - Drew 8 bounding boxes on image
+2025-07-15 19:14:04,501 - src.utils.image_processor - INFO - Resized image from 318x159 to 300x150
+2025-07-15 19:14:04,504 - src.utils.image_processor - INFO - Resized image from 318x159 to 300x150
+2025-07-15 19:25:38,473 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:25:39,803 - src.services.azure_service - ERROR - Azure API request failed: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 19:25:49,799 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:25:51,475 - src.services.azure_service - ERROR - Azure API request failed: 404 Client Error: Not Found for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration1/image
+2025-07-15 19:27:55,943 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:27:57,878 - src.services.azure_service - INFO - Azure detection completed in 1.94s with 46 detections
+2025-07-15 19:27:57,896 - src.utils.image_processor - INFO - Drew 7 bounding boxes on image
+2025-07-15 19:30:23,860 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:30:26,306 - src.services.azure_service - INFO - Azure detection completed in 2.45s with 46 detections
+2025-07-15 19:30:26,318 - src.utils.image_processor - INFO - Drew 7 bounding boxes on image
+2025-07-15 19:30:42,923 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:30:45,298 - src.services.azure_service - INFO - Azure detection completed in 2.37s with 48 detections
+2025-07-15 19:30:45,322 - src.utils.image_processor - INFO - Drew 6 bounding boxes on image
+2025-07-15 19:30:54,764 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:30:57,484 - src.services.azure_service - INFO - Azure detection completed in 2.72s with 28 detections
+2025-07-15 19:30:57,498 - src.utils.image_processor - INFO - Drew 7 bounding boxes on image
+2025-07-15 19:31:54,703 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:31:56,268 - src.services.azure_service - INFO - Azure detection completed in 1.57s with 7 detections
+2025-07-15 19:31:56,270 - src.utils.image_processor - INFO - Drew 0 bounding boxes on image
+2025-07-15 19:32:04,978 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-15 19:32:06,581 - src.services.azure_service - INFO - Azure detection completed in 1.60s with 7 detections
+2025-07-15 19:32:06,589 - src.utils.image_processor - INFO - Drew 2 bounding boxes on image

@@ -68,8 +68,8 @@ class ImageProcessor:
                 # Draw bounding box with thin line
                 draw.rectangle([left, top, right, bottom], outline=color, width=2)
                 
-                # Prepare clean label text
-                label = f"{detection.tag_name} {detection.confidence:.2f}"
+                # Prepare clean label text (without confidence score)
+                label = f"{detection.tag_name}"
                 
                 # Get text dimensions
                 text_bbox = draw.textbbox((0, 0), label, font=font)
