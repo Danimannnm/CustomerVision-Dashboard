@@ -23,7 +23,7 @@ class Config:
     def _setup_logging(self):
         """Set up logging configuration."""
         logging.basicConfig(
-            level=logging.INFO,
+            level=logging.DEBUG,  # Changed to DEBUG for better debugging
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
                 logging.StreamHandler(),

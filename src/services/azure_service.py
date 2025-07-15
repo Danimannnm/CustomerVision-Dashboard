@@ -41,10 +41,13 @@ class AzureCustomVisionService(DetectionService):
             response.raise_for_status()
             result_data = response.json()
             
+            self.logger.info(f"Azure response: {result_data}")
+            
             processing_time = time.time() - start_time
             
             # Parse Azure response
             detections = self._parse_azure_response(result_data)
+            self.logger.info(f"Azure parsed {len(detections)} detections")
             
             # Get image dimensions (will be set by caller if needed)
             image_dimensions = (0, 0)
@@ -71,29 +74,52 @@ class AzureCustomVisionService(DetectionService):
         """Parse Azure Custom Vision API response."""
         detections = []
         
+        self.logger.info(f"Parsing Azure response: {response_data}")
+        
         predictions = response_data.get('predictions', [])
-        for prediction in predictions:
+        self.logger.info(f"Found {len(predictions)} predictions in Azure response")
+        
+        for i, prediction in enumerate(predictions):
             try:
+                self.logger.debug(f"Processing Azure prediction {i}: {prediction}")
+                
                 bbox_data = prediction.get('boundingBox', {})
+                tag_name = prediction.get('tagName', 'Unknown')
+                confidence = prediction.get('probability', 0.0)
+                
+                self.logger.debug(f"Azure detection: {tag_name} ({confidence:.3f}) bbox: {bbox_data}")
+                
+                # Validate bounding box data
+                if not bbox_data:
+                    self.logger.warning(f"No bounding box data for prediction {i}")
+                    continue
+                
                 bounding_box = BoundingBox(
-                    left=bbox_data.get('left', 0.0),
-                    top=bbox_data.get('top', 0.0),
-                    width=bbox_data.get('width', 0.0),
-                    height=bbox_data.get('height', 0.0)
+                    left=float(bbox_data.get('left', 0.0)),
+                    top=float(bbox_data.get('top', 0.0)),
+                    width=float(bbox_data.get('width', 0.0)),
+                    height=float(bbox_data.get('height', 0.0))
                 )
                 
+                # Validate box dimensions
+                if bounding_box.width <= 0 or bounding_box.height <= 0:
+                    self.logger.warning(f"Invalid box dimensions for prediction {i}: width={bounding_box.width}, height={bounding_box.height}")
+                    continue
+                
                 detection = Detection(
-                    tag_name=prediction.get('tagName', 'Unknown'),
-                    confidence=prediction.get('probability', 0.0),
+                    tag_name=tag_name,
+                    confidence=confidence,
                     bounding_box=bounding_box
                 )
                 
                 detections.append(detection)
+                self.logger.debug(f"Successfully added Azure detection: {tag_name}")
                 
             except Exception as e:
-                self.logger.warning(f"Failed to parse Azure detection: {e}")
+                self.logger.warning(f"Failed to parse Azure detection {i}: {e}")
                 continue
-                
+        
+        self.logger.info(f"Successfully parsed {len(detections)} Azure detections")
         return detections
     
     def get_service_name(self) -> str:
