@@ -106,38 +106,25 @@ class GoogleAutoMLService(DetectionService):
                     # Extract the protobuf data
                     pb_data = prediction._pb
                     self.logger.info(f"Found protobuf data: {pb_data}")
-                    self.logger.debug(f"pb_data type: {type(pb_data)}")
-                    self.logger.debug(f"pb_data keys: {list(pb_data.keys()) if hasattr(pb_data, 'keys') else 'No keys method'}")
-                    
-                    # Direct extraction from protobuf structure - this is the key fix
-                    confidences = []
-                    display_names = []
-                    bboxes_raw = []
-                    
+                    # Use helper to extract list values from protobuf ListValue
                     # Extract confidences
-                    if 'confidences' in pb_data:
-                        for conf_value in pb_data['confidences'].values:
-                            confidences.append(float(conf_value.number_value))
-                    
+                    conf_val = pb_data['confidences'] if 'confidences' in pb_data else None
+                    confidences = self._extract_list_values(conf_val.list_value if conf_val and hasattr(conf_val, 'list_value') else None)
                     # Extract display names
-                    if 'displayNames' in pb_data:
-                        for name_value in pb_data['displayNames'].values:
-                            display_names.append(str(name_value.string_value))
-                    
-                    # Extract bounding boxes
-                    if 'bboxes' in pb_data:
-                        for box_list in pb_data['bboxes'].values:
-                            box_coords = []
-                            for coord in box_list.list_value.values:
-                                box_coords.append(float(coord.number_value))
-                            bboxes_raw.append(box_coords)
-                    
+                    name_val = pb_data['displayNames'] if 'displayNames' in pb_data else None
+                    display_names = self._extract_list_values(name_val.list_value if name_val and hasattr(name_val, 'list_value') else None)
+                    # Extract bounding boxes (each value is a ListValue)
+                    bboxes_raw = []
+                    bbox_val = pb_data['bboxes'] if 'bboxes' in pb_data else None
+                    if bbox_val and hasattr(bbox_val, 'list_value'):
+                        for item in bbox_val.list_value.values:
+                            if hasattr(item, 'list_value'):
+                                coords = self._extract_list_values(item.list_value)
+                                bboxes_raw.append(coords)
                     self.logger.info(f"Extracted - confidences: {confidences}, names: {display_names}, bboxes: {bboxes_raw}")
-                    
                     # Validate we have data
                     if not confidences or not display_names or not bboxes_raw:
                         self.logger.warning(f"Missing data after extraction: conf={len(confidences)}, names={len(display_names)}, boxes={len(bboxes_raw)}")
-                    
                     # Create detections directly from extracted data
                     for j, (name, bbox, confidence) in enumerate(zip(display_names, bboxes_raw, confidences)):
                         try:
@@ -150,9 +137,8 @@ class GoogleAutoMLService(DetectionService):
                                 self.logger.warning(f"Failed to create detection for {name}")
                         except Exception as e:
                             self.logger.warning(f"Failed to create detection: {e}")
-                
-                # Fallback to standard dict parsing
                 else:
+                    # Fallback to standard dict parsing
                     # Convert prediction to dict if needed
                     if hasattr(prediction, 'to_dict'):
                         pred_dict = prediction.to_dict()
