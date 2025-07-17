@@ -158,16 +158,18 @@ class ObjectDetectionDashboard:
             # Store service choice
             st.session_state.selected_service = service_choice
             st.session_state.confidence_threshold = confidence_threshold
+            
+            # Technical toggle for detection results
+            st.divider()
+            st.session_state.show_technical = st.toggle("Show Technical Results", value=False, help="Show detection details and raw results")
     
     def _render_main_content(self):
         """Render the main content area."""
-        # Create two-column layout like the reference
-        col1, col2 = st.columns([1, 1])
+        # Upload and show processed image on top
+        self._render_file_upload()
         
-        with col1:
-            self._render_file_upload()
-        
-        with col2:
+        # Show detection results only if technical toggle is enabled
+        if st.session_state.get("show_technical", False):
             self._render_results_section()
     
     def _render_file_upload(self):
@@ -181,17 +183,34 @@ class ObjectDetectionDashboard:
         )
         
         if uploaded_file is not None:
-            # Display the uploaded image
-            image = Image.open(uploaded_file)
-            st.image(image, caption="Uploaded Image", use_container_width=True)
-            
             # Store in session state
+            image = Image.open(uploaded_file)
+            
+            # Check if this is a new image (different from the last uploaded one)
+            if not hasattr(st.session_state, 'uploaded_file') or st.session_state.uploaded_file != uploaded_file:
+                # Clear previous results when new image is uploaded
+                st.session_state.annotated_image = None
+                st.session_state.detection_results = []
+            
             st.session_state.uploaded_image = image
             st.session_state.uploaded_file = uploaded_file
+            
+            # Show processed image if available, otherwise show original
+            if hasattr(st.session_state, 'annotated_image') and st.session_state.annotated_image:
+                st.image(st.session_state.annotated_image, caption="Processed Image with Bounding Boxes", width=600)
+            else:
+                st.image(image, caption="Uploaded Image", width=600)
             
             # Detection button
             if st.button("🔍 Detect Objects", type="primary", use_container_width=True):
                 self._run_detection(uploaded_file)
+        else:
+            # Clear session state when no file is uploaded
+            if hasattr(st.session_state, 'uploaded_image'):
+                st.session_state.uploaded_image = None
+                st.session_state.uploaded_file = None
+                st.session_state.annotated_image = None
+                st.session_state.detection_results = []
     
     def _run_detection(self, uploaded_file):
         """Run object detection on the uploaded image."""
@@ -203,6 +222,8 @@ class ObjectDetectionDashboard:
                 st.session_state.detection_results = results
                 st.session_state.annotated_image = annotated_image
                 st.success("Detection completed!")
+                # Force a rerun to update the image display
+                st.rerun()
             except Exception as e:
                 st.error(f"Error during detection: {str(e)}")
     
@@ -232,25 +253,16 @@ class ObjectDetectionDashboard:
         return result, annotated_image
     
     def _render_results_section(self):
-        """Render the detection results section."""
-        st.header("Detection Results")
+        """Render the detection results section (technical details)."""
+        st.header("Detection Results (Technical)")
         
         if hasattr(st.session_state, 'detection_results') and st.session_state.detection_results:
             result = st.session_state.detection_results
             service_name = st.session_state.selected_service
             
             self._display_results(result, service_name)
-            
-            # Display annotated image if available
-            if hasattr(st.session_state, 'annotated_image') and st.session_state.annotated_image:
-                st.subheader("🎯 Annotated Image")
-                st.image(
-                    st.session_state.annotated_image, 
-                    caption="Image with detected objects and bounding boxes", 
-                    use_container_width=True
-                )
         else:
-            st.info("Upload an image and click 'Detect Objects' to see results here.")
+            st.info("Upload an image and click 'Detect Objects' to see technical results here.")
     
     def _display_results(self, result: DetectionResult, service_name: str):
         """Display detection results in a formatted way like the reference."""
