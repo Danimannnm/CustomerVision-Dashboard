@@ -3623,3 +3623,67 @@ model_version_id: "1"
 2025-07-16 15:38:43,144 - src.services.azure_service - INFO - Azure parsed 67 detections
 2025-07-16 15:38:43,144 - src.services.azure_service - INFO - Azure detection completed in 1.41s with 67 detections
 2025-07-16 15:38:43,162 - src.utils.image_processor - INFO - Drew 7 bounding boxes on image
+2025-07-17 12:27:53,716 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:27:53,722 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:27:54,679 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:27:54,679 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:39:44,242 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:39:44,243 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:39:45,150 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:39:45,151 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:39:50,065 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:39:50,067 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:39:50,767 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:39:50,768 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:40:04,826 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:40:04,827 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:40:05,603 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:40:05,603 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:40:23,500 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:40:23,505 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:40:24,318 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:40:24,319 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:40:44,729 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:40:44,731 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:40:45,485 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:40:45,485 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:44:19,271 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:44:19,275 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:44:20,059 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:44:20,060 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:46:44,028 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:46:44,029 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:46:44,797 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:46:44,798 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:49:53,488 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:49:53,489 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:49:54,294 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:49:54,294 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:51:11,061 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:51:11,064 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:51:11,858 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:51:11,859 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:53:23,317 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:53:23,321 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:53:24,070 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:53:24,071 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:54:01,291 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:54:01,294 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:54:02,084 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:54:02,085 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:55:09,890 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:55:09,893 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:55:10,639 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:55:10,640 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:58:07,665 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:58:07,668 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:58:08,419 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:58:08,420 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 12:58:21,095 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 12:58:21,098 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 12:58:21,862 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 12:58:21,863 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
+2025-07-17 13:01:35,588 - src.services.azure_service - INFO - Starting Azure Custom Vision object detection
+2025-07-17 13:01:35,590 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): southeastasia.api.cognitive.microsoft.com:443
+2025-07-17 13:01:36,332 - urllib3.connectionpool - DEBUG - https://southeastasia.api.cognitive.microsoft.com:443 "POST /customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image HTTP/1.1" 401 224
+2025-07-17 13:01:36,334 - src.services.azure_service - ERROR - Azure API request failed: 401 Client Error: PermissionDenied for url: https://southeastasia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/92001736-b169-41ee-987e-88230c3eb23d/detect/iterations/Iteration2/image
